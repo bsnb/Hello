@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/txtout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="@string/txtout1" />
+    <EditText
+        android:id="@+id/inp"
+        android:layout_width="match_parent"
+        android:hint="@string/inp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:inputType="numberDecimal"
+        android:importantForAutofill="no" />
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="转换"
+        android:onClick="btn"
+        />
+    <TextView
+        android:id="@+id/txtout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="@string/txtout2" />
+
+
+</LinearLayout>
