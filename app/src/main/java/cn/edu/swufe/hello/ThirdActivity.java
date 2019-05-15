@@ -33,6 +33,8 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
         btn4b.setOnClickListener(this);
     }
 
+
+
     @Override
     public void onClick(View v) {
         int p=Integer.parseInt(out.getText().toString());
@@ -49,6 +51,24 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
 
         }
 
+
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        String scorea = (out.getText().toString());
+        String scoreb = (outb.getText().toString());
+        outState.putString("teama-score",scorea);
+        outState.putString("teamb-score",scoreb);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        String scorea = savedInstanceState.getString("teama-score");
+        String scoreb = savedInstanceState.getString("teamb-score");
+        out.setText(scorea);
+        outb.setText(scoreb);
 
     }
 }
