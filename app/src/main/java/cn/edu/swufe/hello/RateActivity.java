@@ -129,8 +129,20 @@ public class RateActivity extends AppCompatActivity implements Runnable {
         if (item.getItemId() == R.id.menu_set) {
             openConfig();
         }else if(item.getItemId()==R.id.open_list){
-            Intent list = new Intent(this,MylistActivity.class);
+            Intent list = new Intent(this,RateListActivity.class);
             startActivity(list);
+//            //测试数据库
+//            RateItem item1 = new RateItem("aaa","123");
+//            RateManager manager = new RateManager(this);
+//            manager.add(item1);
+//            manager.add(new RateItem("bbb","23.5"));
+//            Log.i(TAG,"onOptionItemSelected:写入数据完毕");
+//
+//            //查询所有数据
+//            List<RateItem> testList = manager.listAll();
+//            for (RateItem i:testList){
+//                Log.i(TAG,"去除数据"+i.getCurName()+" "+i.getCurRate());
+//            }
         }
 
 
